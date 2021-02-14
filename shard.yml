@@ -9,6 +9,9 @@ dependencies:
     github: kemalcr/kemal
     branch: master
 
+  cryomongo:
+    github: elbywan/cryomongo
+
 targets:
   shorty:
     main: src/shorty.cr

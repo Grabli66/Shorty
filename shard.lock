@@ -1,5 +1,17 @@
 version: 2.0
 shards:
+  bson:
+    git: https://github.com/elbywan/bson.cr.git
+    version: 0.3.0
+
+  cryomongo:
+    git: https://github.com/elbywan/cryomongo.git
+    version: 0.3.3
+
+  db:
+    git: https://github.com/crystal-lang/crystal-db.git
+    version: 0.10.0
+
   exception_page:
     git: https://github.com/crystal-loot/exception_page.git
     version: 0.1.4
