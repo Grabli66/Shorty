@@ -1,0 +1,18 @@
+name: shorty
+version: 0.1.0
+
+authors:
+  - Grabli66 <grabli66@gmail.com>
+
+dependencies:
+  kemal:
+    github: kemalcr/kemal
+    branch: master
+
+targets:
+  shorty:
+    main: src/shorty.cr
+
+crystal: 0.36.1
+
+license: MIT
