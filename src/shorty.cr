@@ -37,7 +37,7 @@ module Shorty
         end
         cursor.each do |link|
           tr do
-            id = link["_id"]?.try &.to_s            
+            id = link["_id"]?.try &.to_s
             next unless id
             long_link = link["long_link"]?.try &.to_s
             next unless long_link
@@ -53,8 +53,8 @@ module Shorty
                 text long_link
               end
             end
-            td do              
-                text show_count.to_s
+            td do
+              text show_count.to_s
             end
           end
         end
@@ -92,9 +92,7 @@ module Shorty
     unless long_link
       halt env, status_code: 404, response: "Not found"
     end
-    show_count = document.try &.["show_count"]?.try &.as(Int32) || 0
-    show_count += 1
-    link_collection.update_one({_id: short_link_id}, { "$set": { show_count: show_count }})    
+    link_collection.update_one({_id: short_link_id}, {"$inc": {show_count: 1}})
 
     env.redirect long_link
   end
