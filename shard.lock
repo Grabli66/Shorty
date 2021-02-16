@@ -16,6 +16,10 @@ shards:
     git: https://github.com/crystal-loot/exception_page.git
     version: 0.1.4
 
+  html_builder:
+    git: https://github.com/crystal-lang/html_builder.git
+    version: 0.2.2
+
   kemal:
     git: https://github.com/kemalcr/kemal.git
     version: 0.27.0+git.commit.f71a83e2c43b963fd2fa2e6fb73b8abf447c17bf
