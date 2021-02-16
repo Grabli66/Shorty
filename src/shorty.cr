@@ -44,8 +44,9 @@ module Shorty
             show_count = link["show_count"]?.try &.as(Int32) || 0
 
             td do
-              a(href: long_link) do
-                text get_short_link(id)
+              short_link = get_short_link(id)
+              a(href: short_link) do
+                text short_link
               end
             end
             td do
