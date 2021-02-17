@@ -65,6 +65,11 @@ module Shorty
     next html
   end
 
+  # Возвращает форму добавления короткой ссылки
+  get "/add" do |env|
+    send_file env, "./bin/assets/add_form.html"    
+  end
+
   # Добавляет ссылку
   # Получает json с длинной ссылкой
   # Возвращает json с короткой ссылкой
@@ -102,6 +107,7 @@ module Shorty
     "Not found"
   end
 
+  public_folder "./bin/assets"
   port = (ENV["PORT"]? || 8080).to_i
   Kemal.run port
 end
